@@ -1,0 +1,25 @@
+<% include ../partials/header%><!--  ../ used to go one step back from campgrounds directory-->
+<div class="container">
+        <div class="row">
+<!--CREATE:   campgrounds/:id/comments   POST-->
+<!--NEW:      campgrounds/:id/comments/new    GET-->
+        <h1 style="text-align:center">Add New Comment to <%= campground.name %></h1>
+        <div style="width:30%; margin:25px auto;">
+            <form action="/campgrounds/<%= campground._id%>/comments" method="POST">
+                <div class=" form-group">
+                    <input class="form-control" type="text" name="comment[text]" placeholder="Text"><!-- comment[] method will give us a short method i.e, req.body.comment (will give an object that contains both name and author) instead of var text= req.body.text and var author= req.body.author-->
+                </div>
+                
+                 
+                <div class=" form-group">
+                    <button class ="btn btn-lg btn-primary   btn-block">Submit!</button>
+                </div>
+                
+            </form>
+             <a href="/campgrounds">Go Back!</a>
+        </div>
+    </div>
+</div>
+
+<%include ../partials/footer%>
+     

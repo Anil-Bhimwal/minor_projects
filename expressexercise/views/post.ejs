@@ -1,0 +1,11 @@
+<h1>THE POST PAGE</h1>
+<% for(var i=0;i<posts.length;i++){%>
+<li>
+    <%=posts[i].title %> - <strong><%= posts[i].author %></strong>
+</li>
+<% } %>
+<% posts.forEach(function(posts){%>
+<li>
+    <%=posts.title %> - <strong><%= posts.author %></strong>
+</li>
+<% }) %>
